@@ -23,7 +23,7 @@ Taxi 6 at 240km, distance to the passenger 552km (free)
 
 class Taxi
 {
-    private int $client;
+    private int $passenger;
     private int $taxiInPark;
     private array $cars;
 
