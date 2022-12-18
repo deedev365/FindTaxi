@@ -5,7 +5,6 @@ class Taxi
     private int $taxiInPark;
     private int $passenger;
     private array $cars;
-    private array $freeCars;
     
     public function __construct()
     {
@@ -21,7 +20,7 @@ class Taxi
         echo 'The passenger is ' . $this->passenger . 'km' . "\n\n";
 
         foreach($this->cars as $car) {
-            echo 'Taxi ' . $car['id'] . ' on ' . $car['position'] . 'km,';
+            echo 'Taxi ' . $car['id'] . ' at ' . $car['position'] . 'km,';
             echo ' distance to the passenger ' . $car['distance'] . 'km ';
             echo ($car['isFree']) ? '(free)' : '(busy)';
             echo ($car['tookOrder']) ? ' - this taxi is going' : '';
@@ -74,5 +73,4 @@ class Taxi
 }
 
 $taxi = new Taxi();
-
 $taxi->findCar();
