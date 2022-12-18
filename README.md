@@ -1,16 +1,17 @@
-# Найти ближащее такси
+# Find the nearest taxi
 
-1. Представим трассу от 0 до 1000 км на которой пять машин такси и один пассажир
+Imagine a track from 0 to 1000 km on which there are 1-10 taxi cars and one passenger
 
-2. Создаем переменную пассажира $passenger = rand (0, 1000)
+Create a passenger by variable $passenger = rand (0, 1000)
 
-3. Создаем массив $cars с пятью машинами такси, с со случайным расположением на трессе от 0 до 1000 км и случайной загрузкой (занят/свободен). 
+We create an array $cars with 5-10 taxi cars, with a random location on the highway from 0 to 1000 km and a random load (busy/free).
 
-4. Посчитать какая из пяти машин ближайщая к пассажиру и свободна и едет к нему
+Calculate which of the five cars is closest to the passenger and is free and goes to him
 
-##### 5. Пример результата
-Такси 1, стоит на 635км, до пассажира 253км (свободен)  
-Такси 2, стоит на 185км, до пассажира 197км (свободен)  
-Такси 3, стоит на 897км, до пассажира 515км (свободен)  
-Такси 4, стоит на 508км, до пассажира 126км (свободен) - едет это такси  
-Такси 5, стоит на 695км, до пассажира 313км (занят)  
+##### Output example:
+
+Taxi 1, stands at 635 km, up to a passenger 253 km (free)
+Taxi 2, stands at 185 km, up to a passenger 197 km (free)
+Taxi 3, stands at 897 km, up to a passenger 515 km (free)
+Taxi 4, stands at 508 km, 126 km to the passenger (free) - this taxi is going
+Taxi 5, stands at 695 km, 313 km to the passenger (busy) 
