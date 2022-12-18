@@ -1,6 +1,6 @@
 # Find the nearest taxi
 
-  Imagine a track from 0 to 1000 km on which there are 1-10 taxi cars and one passenger
+  Imagine a track from 0 to 1000 km on which there are 5-10 taxi cars and one passenger
   
   Create a passenger by variable $passenger = rand (0, 1000)
   
