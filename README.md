@@ -10,8 +10,12 @@ Calculate which of the five cars is closest to the passenger and is free and goe
 
 ##### Output example:
 
-Taxi 1, stands at 635 km, up to a passenger 253 km (free)
-Taxi 2, stands at 185 km, up to a passenger 197 km (free)
-Taxi 3, stands at 897 km, up to a passenger 515 km (free)
-Taxi 4, stands at 508 km, 126 km to the passenger (free) - this taxi is going
-Taxi 5, stands at 695 km, 313 km to the passenger (busy) 
+Taxi 1 at 635 km, distance to the passenger 253 km (free) 
+
+Taxi 2 at 185 km, distance to the passenger 197 km (free) 
+
+Taxi 3 at 897 km, distance to the passenger 515 km (free) 
+
+Taxi 4 at 508 km, distance to the passenger 126 km (free) - this taxi is going
+
+Taxi 5 at 695 km, distance to the passenger 313 km (busy)  
