@@ -33,33 +33,7 @@ class Taxi
         $this->taxiInPark = rand(5, 10);
         $this->cars = $this->getCars($this->taxiInPark);
     }
-
-    public function findCar()
-    {
-        $this->findCarForPassenger();
-        $this->printCarsResult();
-    }
-
-    private function findCarForPassenger(): void
-    {
-        $carIdForPassenger = 1;
-        
-        foreach($this->cars as $carId => &$car) {
-            
-            if($this->passenger < $car['position']) {
-                $car['distance'] = $car['position'] - $this->passenger;
-            } elseif ($this->passenger >= $car['position']) {
-                $car['distance'] = $this->passenger - $car['position'];
-            }
-            
-            if($car['distance'] < $this->cars[$carIdForPassenger]['distance']) {
-                $carIdForPassenger = $carId;
-            }
-        }
-        
-        $this->cars[$carIdForPassenger]['tookOrder'] = true;
-    }
-
+    
     private function getCars(int $taxiInPark): array
     {
         $cars = [];
@@ -74,6 +48,40 @@ class Taxi
         }
 
         return $cars;
+    }
+
+
+    public function findCar()
+    {
+        $carIdForPassenger = $this->getCarIdForPassenger();
+        
+        $this->sendCarToPassender($carIdForPassenger);
+        
+        $this->printCarsResult();
+    }
+    
+    private function getCarIdForPassenger(): int
+    {
+        $carIdForPassenger = 1;
+        foreach($this->cars as $carId => &$car) {
+            
+            if($this->passenger < $car['position']) {
+                $car['distance'] = $car['position'] - $this->passenger;
+            } elseif ($this->passenger >= $car['position']) {
+                $car['distance'] = $this->passenger - $car['position'];
+            }
+            
+            if($car['distance'] < $this->cars[$carIdForPassenger]['distance']) {
+                $carIdForPassenger = $carId;
+            }
+        }
+        
+        return $carIdForPassenger;
+    }
+    
+    private function sendCarToPassender(int $carIdForPassenger): void
+    {
+        $this->cars[$carIdForPassenger]['tookOrder'] = true;
     }
 
     private function printCarsResult(): void
