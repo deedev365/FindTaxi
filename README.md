@@ -9,13 +9,18 @@
   Calculate which of the five cars is closest to the passenger and is free and goes to him
 
 ##### Output example:
-
-  Taxi 1 at 635 km, distance to the passenger 253 km (free) 
+  Output example:
   
-  Taxi 2 at 185 km, distance to the passenger 197 km (free) 
+  The passenger at 792km
   
-  Taxi 3 at 897 km, distance to the passenger 515 km (free) 
+  Taxi 1 at 370km, distance to the passenger 422km (busy)
   
-  Taxi 4 at 508 km, distance to the passenger 126 km (free) - this taxi is going
+  Taxi 2 at 87km, distance to the passenger 705km (busy)
   
-  Taxi 5 at 695 km, distance to the passenger 313 km (busy)  
+  Taxi 3 at 426km, distance to the passenger 366km (busy)
+  
+  Taxi 4 at 628km, distance to the passenger 164km (free) - this taxi is going
+  
+  Taxi 5 at 515km, distance to the passenger 277km (busy)
+  
+  Taxi 6 at 240km, distance to the passenger 552km (busy)
