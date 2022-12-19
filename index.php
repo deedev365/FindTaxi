@@ -29,7 +29,7 @@ class Taxi
 
     public function __construct()
     {
-        $this->passenger = rand (0, 1000);
+        $this->passenger = rand(0, 1000);
         $this->taxiInPark = rand(5, 10);
         $this->cars = $this->getCars($this->taxiInPark);
     }
@@ -65,13 +65,13 @@ class Taxi
         $carIdForPassenger = 1;
         foreach($this->cars as $carId => &$car) {
             
-            if($this->passenger < $car['position']) {
+            if ($this->passenger < $car['position']) {
                 $car['distance'] = $car['position'] - $this->passenger;
             } elseif ($this->passenger >= $car['position']) {
                 $car['distance'] = $this->passenger - $car['position'];
             }
             
-            if($car['distance'] < $this->cars[$carIdForPassenger]['distance']) {
+            if ($car['distance'] < $this->cars[$carIdForPassenger]['distance']) {
                 $carIdForPassenger = $carId;
             }
         }
@@ -89,8 +89,8 @@ class Taxi
         echo 'The passenger at ' . $this->passenger . 'km' . "\n\n";
 
         foreach($this->cars as $car) {
-            echo 'Taxi ' . $car['id'] . ' at ' . $car['position'] . 'km,';
-            echo ' distance to the passenger ' . $car['distance'] . 'km ';
+            echo 'Taxi ' . $car['id'] . ' at ' . $car['position'] . 'km, ';
+            echo 'distance to the passenger ' . $car['distance'] . 'km ';
             echo ($car['isFree']) ? '(free)' : '(busy)';
             echo ($car['tookOrder']) ? ' - this taxi is going' : '';
             echo "\n";
